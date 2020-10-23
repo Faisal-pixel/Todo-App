@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(120deg, #e2c35d, #d88771);
+  color: white;
+  font-family: "poppins", sans-serif;
+}
+header {
+  font-size: 1rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  flex-wrap: wrap;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: white;
+}
+form input:focus,
+form button:focus {
+  outline: none;
+}
+
+form button {
+  color: #d88771;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background-color: #d88771;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todoDiv {
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  flex-wrap: wrap;
+}
+.todoDiv li {
+  flex: 1;
+}
+.trash-button,
+.completed-button {
+  background-color: #d88771;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.completed-button {
+  background-color: rgb(73, 204, 73);
+}
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+  /* transition: all 0.5s ease; */
+}
+.completed {
+  text-decoration: line-through;
+
+  opacity: 0.5;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: #d88771;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #ff6f47;
+  color: white;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+.select:hover::after {
+  background-color: white;
+  color: #ff6f47;
+}
+
+@media (max-width: 1000) {
+  /* .todoDiv {
+  } */
+}
+.todo-item {
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ff6f47);
+  border-radius: 6px;
+}
